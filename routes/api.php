@@ -31,3 +31,10 @@ Route::group(['namespace' => 'Api'], function () {
         'users'   => 'UserController',
     ]);
 });
+
+Route::group(['namespace' => 'Api'], function () {
+
+    Route::apiResources([
+        'categories'   => 'CategoryController',
+    ]);
+});
