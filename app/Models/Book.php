@@ -22,6 +22,8 @@ class Book extends Model
         'image',
         'is_booked',
         'user_id',
+        'lang',
+        'category_id'
     ];
 
     /**
@@ -33,21 +35,21 @@ class Book extends Model
         'is_booked' => 'boolean',
     ];
 
-     /**
+    /**
      * @return BelongsTo
      * book's user
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo( User::class );
+        return $this->belongsTo(User::class);
     }
 
-     /**
+    /**
      * @return BelongsTo
      * book's category
      */
     public function category(): BelongsTo
     {
-        return $this->belongsTo(Category::class );
+        return $this->belongsTo(Category::class);
     }
 }

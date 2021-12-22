@@ -24,3 +24,10 @@ Route::group(['namespace' => 'Api'], function () {
         'books'   => 'BookController',
     ]);
 });
+
+Route::group(['namespace' => 'Api'], function () {
+
+    Route::apiResources([
+        'users'   => 'UserController',
+    ]);
+});

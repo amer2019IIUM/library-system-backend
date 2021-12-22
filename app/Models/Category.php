@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
+    protected $table = "categories";
+
     use HasFactory;
 
     /**
@@ -16,15 +18,15 @@ class Category extends Model
      * @var array
      */
     protected $fillable = [
-        'catergory_name',
+        'category_name',
     ];
 
-     /**
+    /**
      * @return HasMany
-     * Get catergory's books
+     * Get Category's books
      */
-    public function books(): HasMany 
+    public function books(): HasMany
     {
-        return $this->hasMany( Book::class );
+        return $this->hasMany(Book::class);
     }
 }

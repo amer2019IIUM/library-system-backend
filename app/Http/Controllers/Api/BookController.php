@@ -26,4 +26,24 @@ class BookController extends Controller
     {
         return new BookResource($this->bookRepository->getAll());
     }
+
+    public function show($id)
+    {
+        return new BookResource($this->bookRepository->getById($id));
+    }
+
+    public function store(Request $request)
+    {
+        return new BookResource($this->bookRepository->create($request->all()));
+    }
+
+    public function update(Request $request, $id)
+    {
+        return new BookResource($this->bookRepository->update($id, $request->all()));
+    }
+
+    public function destroy($id)
+    {
+        new BookResource($this->bookRepository->delete($id));
+    }
 }

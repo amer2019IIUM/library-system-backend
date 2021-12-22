@@ -23,7 +23,7 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'catergory_name' => $this->faker->numberBetween(-10000, 10000),
+            'Category_name' => $this->faker->numberBetween(-10000, 10000),
         ];
     }
 }

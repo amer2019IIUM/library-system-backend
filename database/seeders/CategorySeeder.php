@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CatergorySeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,9 +16,10 @@ class CatergorySeeder extends Seeder
     {
         DB::table('categories')->delete();
 
-        $categories=array(
-            array('id' => '1', 'catergory_name'=>'history', 'lang'=>'en' ),
-            array('id' => '2', 'catergory_name'=>'sport', 'lang'=>'ar' ), );
+        $categories = array(
+            array('id' => '1', 'category_name' => 'history', 'lang' => 'en'),
+            array('id' => '2', 'category_name' => 'sport', 'lang' => 'ar'),
+        );
 
         DB::table('categories')->insert($categories);
     }
