@@ -1,0 +1,14 @@
+created:
+    - database/factories/UserFactory.php
+    - database/factories/BookFactory.php
+    - database/factories/CategoryFactory.php
+    - database/migrations/2021_12_22_072226_create_users_table.php
+    - database/migrations/2021_12_22_072227_create_books_table.php
+    - database/migrations/2021_12_22_072228_create_categories_table.php
+    - app/Models/User.php
+    - app/Models/Book.php
+    - app/Models/Category.php
+models:
+    User: { id: increments, username: string, email: string, email_verified_at: 'string nullable', password: string, address: string, lat: string, lng: string, isblocked: 'boolean nullable' }
+    Book: { id: increments, book_name: string, book_desc: text, author: string, image: longText, is_booked: 'boolean nullable', user_id: integer }
+    Category: { id: increments, catergory_name: integer }
