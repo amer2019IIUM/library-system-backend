@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('lat');
             $table->string('lng');
+            $table->boolean('is_admin')->nullable();
             $table->boolean('isblocked')->nullable();
             $table->timestamps();
         });

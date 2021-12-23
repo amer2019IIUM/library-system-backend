@@ -27,6 +27,11 @@ class UserController extends Controller
         return new UserResource($this->userRepository->getAll());
     }
 
+    public function show($id)
+    {
+        return new UserResource($this->userRepository->getById($id));
+    }
+
     public function store(Request $request)
     {
         return new UserResource($this->userRepository->create($request->all()));
