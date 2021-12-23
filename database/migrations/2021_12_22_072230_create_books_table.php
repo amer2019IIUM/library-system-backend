@@ -24,7 +24,7 @@ class CreateBooksTable extends Migration
             $table->boolean('is_booked')->nullable();
             $table->string('lang')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');;
             $table->timestamps();
         });
     }

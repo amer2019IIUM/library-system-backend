@@ -68,9 +68,10 @@ class AuthController extends Controller
 
     public function profile(Request $request)
     {
+
         $user = User::find($request->user()->id);
 
-        return $user;
+        return array("user" => $user, "books" => $user->books);
     }
 
 

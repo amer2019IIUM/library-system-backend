@@ -41,4 +41,9 @@ class UserController extends Controller
     {
         new UserResource($this->userRepository->update($id, $request->all()));
     }
+
+    public function destroy($id)
+    {
+        new UserResource($this->userRepository->delete($id));
+    }
 }
